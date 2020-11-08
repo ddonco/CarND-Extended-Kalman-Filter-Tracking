@@ -1,7 +1,16 @@
 # Extended Kalman Filter Project
 Self-Driving Car Engineer Nanodegree Program
 
+[//]: # (Image References)
+
+[screenshot1]: ./examples/project_screenshot1.png "Simulator Screenshor 1"
+[screenshot2]: ./examples/project_screenshot2.png "Simulator Screenshor 2"
+[screenshot3]: ./examples/project_screenshot3.png "Simulator Screenshor 3"
+[screenshot4]: ./examples/project_screenshot4.png "Simulator Screenshor 4"
+
 This project utilizes a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. The goal of the project is to obtain RMSE values for `px, py, vx, and vy` that are lower than the target tolerance values of [0.11, 0.11, 0.52, 0.52].
+
+![alt text][screenshot4]
 
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases).
 
@@ -14,6 +23,12 @@ Once the installation of uWebSocketIO is complete, the main program can be built
 3. cmake ..
 4. make
 5. ./ExtendedKF
+
+Starting the ExtendedKF web server application in a terminal, and then running the Term 2 Simulator will produce results similar to the screenshots below.
+
+![alt text][screenshot1]
+
+![alt text][screenshot3]
 
 Below is the simplified protocol that main.cpp uses for uWebSocketIO communication with the simulator.
 
