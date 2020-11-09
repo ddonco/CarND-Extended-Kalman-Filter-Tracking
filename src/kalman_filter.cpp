@@ -4,8 +4,8 @@ using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
 /* 
- * Please note that the Eigen library does not initialize 
- *   VectorXd or MatrixXd objects with zeros upon creation.
+ * Note that the Eigen library does not initialize 
+ * VectorXd or MatrixXd objects with zeros upon creation.
  */
 
 KalmanFilter::KalmanFilter() {}
@@ -69,8 +69,7 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   MatrixXd Ht = H_.transpose();
   MatrixXd S = H_ * P_ * Ht + R_;
   MatrixXd Si = S.inverse();
-  MatrixXd PHt = P_ * Ht;
-  MatrixXd K = PHt * Si;
+  MatrixXd K = P_ * Ht * Si;
 
   // new estimate
   x_ = x_ + (K * y);
